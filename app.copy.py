@@ -8,19 +8,19 @@ st.title("HR 퇴직현황 대시보드")
 
 # 1. 데이터 불러오기
 df = pd.read_csv("HR Data.csv")
-st.write(df)
+# st.write(df)
 
 
-    # # 2. KPI 3개 
-    # total_employees = len(df)
-    # total_attritions = len(df[df["attrition"] == "Yes"])
-    # overall_rate = (total_attritions / total_employees * 100) if total_employees > 0 else 0
+# 2. KPI 3개 
+total_employees = len(df)
+total_attritions = len(df[df["attrition"] == "Yes"])
+overall_rate = (total_attritions / total_employees * 100) if total_employees > 0 else 0
 
-    # col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns(3)
 
-    # col1.metric(label="전체 직원 수", value=f"{total_employees:,}명")
-    # col2.metric(label="퇴직자 수", value=f"{total_attritions:,}명")
-    # col3.metric(label="전체 퇴직률", value=f"{overall_rate:.1f}%")
+col1.metric(label="전체 직원 수", value=f"{total_employees:,}명")
+col2.metric(label="퇴직자 수", value=f"{total_attritions:,}명")
+col3.metric(label="전체 퇴직률", value=f"{overall_rate:.1f}%")
 
     # # 3. 그래프 2개
     # # 그래프 1 : 부서별 퇴직자 수
