@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import koreanize_matplotlib
 
-st.title("매출 대시보드")
+st.title("매출 대시보드d")
 
 # 1. 데이터 만들기
 df = pd.DataFrame({
