@@ -53,7 +53,7 @@ ax2.set_xlabel("부서")
 ax2.set_ylabel("평균 매출(만원)")
 st.pyplot(fig2)
 
-# 7. 그래프 subplots() =  구간 나워서 양쪽 그래프
+# 7. 그래프 subplots()
 graph_col1, graph_col2 = st.columns(2)
 
 graph_col1.subheader("직원별 매출")
@@ -63,7 +63,7 @@ sns.barplot(data=result, x="직원", y="매출", ax=ax1)
 ax1.set_xlabel("직원")
 ax1.set_ylabel("매출(만원)")
 ax1.tick_params(axis="x", rotation=30)
-graph_col1.pyplot(fig1) # 왼쪽 그래프
+graph_col1.pyplot(fig1)
 
 graph_col2.subheader("부서별 평균 매출")
 
@@ -71,7 +71,7 @@ fig2, ax2 = plt.subplots(figsize=(6, 4))
 sns.barplot(data=result, x="부서", y="매출", ax=ax2)
 ax2.set_xlabel("부서")
 ax2.set_ylabel("평균 매출(만원)")
-graph_col2.pyplot(fig2) # 오른쪽 그래프
+graph_col2.pyplot(fig2)
 
 # table
 st.write(result)
